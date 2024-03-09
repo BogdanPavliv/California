@@ -6,4 +6,4 @@
 - PHP,
 - GULP
 
-[Watch demo](https://bogdanpavliv.github.io/California/)
+[Watch demo](https://bogdanpavliv.github.io/california/)
