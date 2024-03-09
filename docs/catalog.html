@@ -6,6 +6,12 @@
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Play:700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -620,55 +626,429 @@
                     </ul>
                 </div>
             </nav>
-            <div data-da=".page__content,992,last" class="page__content-side">
-                <div class="page__news-side news-side">
-                    <a href="" class="news-side__title side-title">Новини</a>
-                    <div class="news-side__items">
-                        <div class="news-side__item">
-                            <a href="" class="news-side__label">Новий магазин California у Києві</a>
-                            <div class="news-side__body">
-                                <div class="news-side__data"><span>12</span>сер</div>
-                                <div class="news-side__text">Привіт! У нашої команди для вас чудова новина — відтепер особливої техніки та ексклюзивних гаджетів у місті Київ буде ще більше 🎉</div>
+            <form action="#" class="filter">
+                <div class="filter__title">Фільтр товарів</div>
+                <div class="filter__content">
+                    <div class="filter__body _spollers">
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title">Ціна (грн.):</div>
+                            <div class="section-filter__body">
+                                <div class="price-filter">
+                                    <div class="price-filter__slider"></div>
+                                    <div class="price-filter__values values-price-filter">
+                                        <div class="values-price-filter__column">
+                                            <div class="values-price-filter__label">від</div>
+                                            <div class="values-price-filter__input">
+                                                <input id="price-start" autocomplete="off" type="text" name="form[]" class="input">
+                                            </div>
+                                        </div>
+                                        <div class="values-price-filter__column">
+                                            <div class="values-price-filter__label">до</div>
+                                            <div class="values-price-filter__input">
+                                                <input id="price-end" autocomplete="off" type="text" name="form[]" class="input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="news-side__item">
-                            <a href="" class="news-side__label">Новий магазин California в місті Камʼянське</a>
-                            <div class="news-side__body">
-                                <div class="news-side__data"><span>19</span>сер</div>
-                                <div class="news-side__text">Привіт! У нашої команди для вас чудова новина — відтепер особливої техніки та ексклюзивних гаджетів у місті Камʼянське буде ще більше 🎉</div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title">Товари для порівняння</div>
+                            <div class="section-filter__body">
+                                <div class="compare-filter">
+                                    <div class="compare-filter__items">
+                                        <div class="compare-filter__item">
+                                            <a href="" class="compare-filter__link">iPhone 15 Pro Max</a>
+                                            <a href="" class="compare-filter__remove"></a>
+                                        </div>
+                                        <div class="compare-filter__item">
+                                            <a href="" class="compare-filter__link">iPhone 14 Pro Max</a>
+                                            <a href="" class="compare-filter__remove"></a>
+                                        </div>
+                                        <div class="compare-filter__item">
+                                            <a href="" class="compare-filter__link">Google Pixel 8</a>
+                                            <a href="" class="compare-filter__remove"></a>
+                                        </div>
+                                    </div>
+                                    <div class="compare-filter__footer">
+                                        <a href="" class="compare-filter__button"><span>Порівняти</span></a>
+                                        <a href="" class="compare-filter__clean"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Бренд:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Apple</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Asus</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Samsung</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Sony</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Google</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Модель:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>iPhone 15 Pro Max</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>iPhone 15 Pro</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>iPhone 15</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>iPhone 14 Pro</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Google Pixel 8</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Об'єм пам'яті:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>128GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>256GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>512GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>1TB</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Оперативна пам'ять:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>8GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>12GB</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>16GB</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Колір пристрою:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Black</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Blue</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Charcoal</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Coral</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Graphite</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Gray</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Green</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Mint</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Midnight</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Midnight Black</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Діагональ екрану:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>5.8"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.1"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.2"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.3"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.4"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.5"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.6"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.7"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.78"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>6.8"</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>7.6"</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Частота оновлення екрану:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>165 Гц</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>144 Гц</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>120 Гц</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>90 Гц</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Основна камера:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>12 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>48 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>13 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>200 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>10 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>50 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>10.8 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>8 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>32 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>5 Мп</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Фронтальна камера:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>10 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>4 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>10.5 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>12 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>13 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>16 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>32 Мп</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>9.5 Мп</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Матеріал корпусу:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Алюміній</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Скло</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Метал</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Пластик</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Титан</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Формат SIM-карти:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>eSim</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Nano Sim + eSim</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Nano Sim + Nano Sim</span></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__section section-filter">
+                            <div class="section-filter__title _spoller">Вірсія:</div>
+                            <div class="section-filter__body">
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>CN</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>eSim</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>Global</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>JP</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>UA</span></span>
+                                </label>
+                                <label class="section-filter__checkbox checkbox">
+                                    <input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                    <span class="checkbox__text"><span>US</span></span>
+                                </label>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="page__reviews-side reviews-side">
-                    <a href="" class="reviews-side__title side-title">Вiдгуки</a>
-                    <div class="reviews-side__items">
-                        <a href="" class="reviews-side__item">
-                            <div class="reviews-side__header">
-                                <div class="reviews-side__user">Павло Никифоров</div>
-                                <div class="reviews-side__data">12.09.2022</div>
-                            </div>
-                            <div class="reviews-side__body">
-                                Дуже задоволений покупкою в California! Онлайн-процес був досить простим та зручним. Замовляв iPhone 15 Pro Max, отримав його вчасно. Телефон вражає своєю швидкістю та продуктивністю.
-                            </div>
-                        </a>
-                        <a href="" class="reviews-side__item">
-                            <div class="reviews-side__header">
-                                <div class="reviews-side__user">Степан Миколайович</div>
-                                <div class="reviews-side__data">12.09.2022</div>
-                            </div>
-                            <div class="reviews-side__body">
-                                Замовляв на сайті, зі мною зв’язалися надали всю інформацію про телефон та терміни доставки.
-                            </div>
-                        </a>
+                    <div class="filter__footer">
+                        <button type="submit" class="filter__btn btn">Підібрати</button>
+                        <button type="reset" class="filter__btn btn btn_grey">Скинути</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </aside>
         <div class="page__content">
             <form action="#" class="page__search search-page">
                 <div class="search-page__select">
-                    <div class="search-page__title"><span>Скрізь</span><span data-text="Обрано:" class="search-page__quantity"></span></div>
+                    <div class="search-page__title"><span>Скрізь</span><span data-text="Выбрано:" class="search-page__quantity"></span></div>
                     <div class="search-page__categories categories-search">
                         <div class="categories-search__row">
                             <div class="categories-search__column">
@@ -791,459 +1171,406 @@
                     </li>
                 </ul>
             </nav>
-            <section class="product">
-                <h1 class="product__title">Мобiльний телефон Apple iPhone 15 Pro Max 256GB Black Titanium (MU773RX/A)</h1>
-                <div class="product__content">
-                    <div class="product__images images-product">
-                        <div class="images-product__mainslider _swiper">
-                            <a href="#" class="images-product__mainslide">
-                                <div class="images-product__sale">-15%</div>
-                                <div class="images-product__image">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15.webp" type="image/webp"><img src="images/product/iPhone15.jpg" alt=""></picture>
-                                </div>
-                            </a>
-                            <a href="#" class="images-product__mainslide">
-                                <div class="images-product__image">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-2.webp" type="image/webp"><img src="images/product/iPhone15-2.jpg" alt=""></picture>
-                                </div>
-                            </a>
-                            <a href="#" class="images-product__mainslide">
-                                <div class="images-product__sale">-15%</div>
-                                <div class="images-product__image">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-3.webp" type="image/webp"><img src="images/product/iPhone15-3.jpg" alt=""></picture>
-                                </div>
-                            </a>
-                            <a href="" class="images-product__mainslide">
-                                <div class="images-product__image">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-4.webp" type="image/webp"><img src="images/product/iPhone15-4.jpg" alt=""></picture>
-                                </div>
-                            </a>
-                            <a href="" class="images-product__mainslide">
-                                <div class="images-product__sale">-15%</div>
-                                <div class="images-product__image">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-5.webp" type="image/webp"><img src="images/product/iPhone15-5.jpg" alt=""></picture>
-                                </div>
-                            </a>
+            <div class="catalog">
+                <h1 class="catalog__title">Популярнi товари</h1>
+                <div class="catalog__actions actions-catalog">
+                    <div class="actions-catalog__order order-catalog">
+                        <div class="order-catalog__label">Сортувати за:</div>
+                        <div class="order-catalog__select">
+                            <select name="form[]" class="form">
+                                <option value="1" selected="selected">За замовчуванням</option>
+                                <option value="2">За ціною</option>
+                                <option value="3">За назвою</option>
+                            </select>
                         </div>
-                        <div class="images-product__subslider _swiper">
-                            <div class="images-product__subslide">
-                                <div class="images-product__subimage _ibg">
+                    </div>
+                    <div class="actions-catalog__view view-catalog">
+                        <div class="view-catalog__item view-catalog__item_grid"></div>
+                        <div class="view-catalog__item view-catalog__item_list"></div>
+                    </div>
+                </div>
+                <div class="catalog__navi navi-catalog navi-catalog_top">
+                    <div class="navi-catalog__show show-catalog">
+                        <div class="show-catalog__label">На сторінці:</div>
+                        <div class="show-catalog__select">
+                            <select name="form[]" class="show">
+                                <option value="1" selected="selected">9</option>
+                                <option value="2">18</option>
+                                <option value="3">32</option>
+                                <option value="4">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="navi-catalog__pages">
+                        <div class="pagging">
+                            <a href="" class="pagging__arrow"></a>
+                            <ul class="pagging__list">
+                                <li>
+                                    <a href="" class="pagging__item _active">1</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">2</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">3</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">4</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">5</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">...</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">10</a>
+                                </li>
+                            </ul>
+                            <a href="" class="pagging__arrow"></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="catalog__products items-products">
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/iPhone15.webp" type="image/webp">
                                     <picture>
-                                        <source srcset="images/product/iPhone15.webp" type="image/webp"><img src="images/product/iPhone15.jpg" alt=""></picture>
+                                        <source srcset="images/products/iPhone15.webp" type="image/webp"><img src="images/products/iPhone15.jpg" alt="iPhone 15"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 15 Pro Max 256GB Black Titanium (MU773RX/A)</span>
+                                </a>
+                                <div class="item-product__footer">
+                                    <div class="item-product__old-price">63 499 грн</div>
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">60 499 грн</div>
                                 </div>
                             </div>
-                            <div class="images-product__subslide">
-                                <div class="images-product__subimage _ibg">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-2.webp" type="image/webp"><img src="images/product/iPhone15-2.jpg" alt=""></picture>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 15 Pro Max 256GB Black Titanium (MU773RX/A)</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Екран (6.7", OLED (Super Retina XDR), 2796x1290) / Apple A17 Pro / основна квадро-камера: 48 Мп + 12 Мп + 12 Мп + 12 Мп, фронтальна камера: 12 Мп / 256 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / Nano-SIM / iOS 17</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="images-product__subslide">
-                                <div class="images-product__subimage _ibg">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-3.webp" type="image/webp"><img src="images/product/iPhone15-3.jpg" alt=""></picture>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
                                 </div>
-                            </div>
-                            <div class="images-product__subslide">
-                                <div class="images-product__subimage _ibg">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-4.webp" type="image/webp"><img src="images/product/iPhone15-4.jpg" alt=""></picture>
-                                </div>
-                            </div>
-                            <div class="images-product__subslide">
-                                <div class="images-product__subimage _ibg">
-                                    <picture>
-                                        <source srcset="images/product/iPhone15-5.webp" type="image/webp"><img src="images/product/iPhone15-5.jpg" alt=""></picture>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__old-price">63 499 грн</div>
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">60 499 грн</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product__body body-product">
-                        <div class="body-product__top">
-                            <a href="" class="body-product__compare"><span>Порівняти</span></a>
-                            <div class="body-product__stock">в наявності</div>
-                        </div>
-                        <div class="body-product__actions actions-product">
-                            <div class="actions-product__row">
-                                <div class="actions-product__column">
-                                    <div class="actions-product__price actions-product__price_old">63 499 грн</div>
-                                    <div class="actions-product__price">60 499 грн</div>
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/iPhone14.webp" type="image/webp">
+                                    <picture>
+                                        <source srcset="images/products/iPhone14.webp" type="image/webp"><img src="images/products/iPhone14.jpg" alt="iPhone 14"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 14 Pro Max 512GB Deep Purple</span>
+                                </a>
+                                <div class="item-product__footer">
+                                    <div class="item-product__old-price">67 499 грн</div>
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">59 999 грн</div>
                                 </div>
-                                <div class="actions-product__column">
-                                    <div class="actions-product__quantity quantity">
-                                        <div class="quantity__button quantity__button_minus"></div>
-                                        <div class="quantity__input">
-                                            <input autocomplete="off" type="text" name="form[]" value="1">
-                                        </div>
-                                        <div class="quantity__button quantity__button_plus"></div>
+                            </div>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 14 Pro Max 512GB Deep Purple</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Екран (6.7", OLED (Super Retina XDR), 2796x1290) / Apple A16 Bionic / основна квадро-камера: 48 Мп + 12 Мп + 12 Мп + 12 Мп, фронтальна камера: 12 Мп / 512 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / Nano-SIM / iOS 16</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
                                     </div>
                                 </div>
-                                <div class="actions-product__column">
-                                    <a href="" class="actions-product__cart">
-                                        <span>В корзину</span>
-                                    </a>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
+                                </div>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__old-price">67 499 грн</div>
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">59 999 грн</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="body-product__include include-product">
-                            <div class="include-product__title">У вартість товару включено:</div>
-                            <div class="include-product__items">
-                                <div class="include-product__item">
-                                    <div class="include-product__icon">
-                                        <picture>
-                                            <source srcset="images/icons/include/01.webp" type="image/webp"><img src="images/icons/include/01.png" alt=""></picture>
-                                    </div>
-                                    <div class="include-product__text">Захисне скло</div>
+                    </div>
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/Pixel8.webp" type="image/webp">
+                                    <picture>
+                                        <source srcset="images/products/Pixel8.webp" type="image/webp"><img src="images/products/Pixel8.jpg" alt="Pixel 8"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Смартфон Google Pixel 8 8/128GB Hazel</span> 
+                                </a>
+                                <div class="item-product__footer">
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">26 944 грн</div>
                                 </div>
-                                <div class="include-product__item">
-                                    <div class="include-product__icon">
-                                        <picture>
-                                            <source srcset="images/icons/include/02.webp" type="image/webp"><img src="images/icons/include/02.png" alt=""></picture>
+                            </div>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Смартфон Google Pixel 8 8/128GB Hazel</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Діагональ екрану: 6.2" / Роздільна здатність дисплея: 2400x1080 / Тип матриці: OLED / Процесор: Google Tensor G3 / Кількість ядер: 8 / Частота процесора: 3 ГГц / Кількість СІМ-карт: SIM + eSIM </div>
                                     </div>
-                                    <div class="include-product__text">Безкоштовна доставка</div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
                                 </div>
-                                <div class="include-product__item">
-                                    <div class="include-product__icon">
-                                        <picture>
-                                            <source srcset="images/icons/include/03.webp" type="image/webp"><img src="images/icons/include/03.png" alt=""></picture>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
+                                </div>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">26 944 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/samsung-s24ultra.webp" type="image/webp">
+                                    <picture>
+                                        <source srcset="images/products/samsung-s24ultra.webp" type="image/webp"><img src="images/products/samsung-s24ultra.jpg" alt="Samsung S24 Ultra"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Мобільний телефон Samsung Galaxy S24 Ultra 12GB/1TB Titanium Gray</span> 
+                                </a>
+                                <div class="item-product__footer">
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">71 999 грн</div>
+                                </div>
+                            </div>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Мобільний телефон Samsung Galaxy S24 Ultra 12GB/1TB Titanium Gray</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Екран (6.8", Dynamic AMOLED 2X, 3120x1440) / Qualcomm Snapdragon 8 Gen 3 for Galaxy (3.4 ГГц + 3.15 ГГц + 2.96 ГГц + 2.27 ГГц) / RAM 12 ГБ / 1 ТБ вбудованої пам'яті</div>
                                     </div>
-                                    <div class="include-product__text">Гарантія</div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                </div>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
+                                </div>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">71 999 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/iPhone13.webp" type="image/webp">
+                                    <picture>
+                                        <source srcset="images/products/iPhone13.webp" type="image/webp"><img src="images/products/iPhone13.jpg" alt="iPhone 13 8"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 13 512GB (PRODUCT) Red (MLQF3HU/A)</span> 
+                                </a>
+                                <div class="item-product__footer">
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">35 000 грн</div>
+                                </div>
+                            </div>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Мобільний телефон Apple iPhone 13 512GB (PRODUCT) Red (MLQF3HU/A)</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Екран (6.1", OLED (Super Retina XDR), 2532x1170) / Apple A15 Bionic / подвійна основна камера: 12 Мп + 12 Мп, фронтальна камера: 12 Мп / 512 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / Nano-SIM, eSIM / iOS 15</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                </div>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
+                                </div>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">35 000 грн</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-products__column">
+                        <div class="item-product">
+                            <div class="item-product__labels">
+                            </div>
+                            <a href="" class="item-product__image">
+                                <picture>
+                                    <source srcset="images/products/asus-rog-phone.webp" type="image/webp">
+                                    <picture>
+                                        <source srcset="images/products/asus-rog-phone.webp" type="image/webp"><img src="images/products/asus-rog-phone.jpg" alt="Asus ROG Phone"></picture>
+                                </picture>
+                            </a>
+                            <div class="item-product__body">
+                                <a href="" class="item-product__title">
+                                    <span>Смартфон Asus Rog Phone 6 16/512GB Phantom Black</span> 
+                                </a>
+                                <div class="item-product__footer">
+                                    <a href="" class="item-product__add"></a>
+                                    <div class="item-product__price">30 343 грн</div>
+                                </div>
+                            </div>
+                            <div class="item-product__hover hover-item-product">
+                                <a href="" class="hover-item-product__title">
+                                    <span>Смартфон Asus Rog Phone 6 16/512GB Phantom Black</span>
+                                </a>
+                                <div class="hover-item-product__options options-item-product">
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Характеристики: </div>
+                                        <div class="options-item-product__value">Дисплей: 6.78" AMOLED (1080 x 2448) / 395 ppi / Corning Gorilla Glass Victus / Процесор: Qualcomm SM8475 Snapdragon 8+ Gen 1 (4 nm) Octa-core 1x3.19 GHz Cortex-X2 & 3x. A710 / Оперативна пам'ять: 16 ГБ / Вбудована пам'ять: 512 ГБ</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Гарантія: </div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                    <div class="options-item-product__item">
+                                        <div class="options-item-product__label">Доставка:</div>
+                                        <div class="options-item-product__value">Є</div>
+                                    </div>
+                                </div>
+                                <div class="hover-item-product__body">
+                                    <a href="" class="hover-item-product__cart"></a>
+                                </div>
+                                <div class="hover-item-product__footer">
+                                    <div class="hover-item-product__stock">в наявності</div>
+                                    <div class="hover-item-product__price">30 343 грн</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="product__info info-product _tabs">
-                    <nav class="info-product__nav">
-                        <div class="info-product__item _tabs-item _active"><span>Опис</span></div>
-                        <div class="info-product__item _tabs-item"><span>Характеристики</span></div>
-                    </nav>
-                    <div class="info-product__body">
-                        <div class="info-product__block _tabs-block _active">
-                            <p>
-                                Apple iPhone 15 Pro Max 256GB (Black Titanium)
-                                <br>
-                                Кожне нове покоління оригінальних смартфонів від творців з Купертіно по-своєму дивує і відкриває перед користувачами низку нових можливостей для творчості, роботи та відпочинку. Яскравіший дисплей, приріст оперативної памʼяті та збільшення базового вбудованого сховища — ми отримали багато цікавого та несподіваного з виходом новинки Епл 2023 року. То ж пропонуємо ближче познайомитись новинкою, та розглянути ключові зміни в дизайні та характеристиках.                                    
-                            </p>
-                            <p>
-                                Бажаєте стати одним з перших щасливих власників новинки? На сайті мережі магазинів California стартує продаж Apple iPhone 15 Pro Max 256GB (Black Titanium) за максимально вигідною ціною. Безкоштовна доставка, вигідна ціна, гарантія від виробника та магазину — станьте на крок ближче до особливої техніки разом з California.
-                            </p>
-                            <p>
-                                Дизайн iPhone 15 Pro Max 256GB (Black Titanium) <br> 
-                                Хоч 15 Pro Max 256GB (Black Titanium) зберігає загальну індустріальну естетику Купертіно, яка зародилась з 12 поколінням iPhone, однак новинка пропонує декілька важливих змін, які освіжають дизайн та поліпшують користувацький досвід гаджетом. Флагманська лінійка смартфонів Епл отримала не лише “космічний матеріал” — титан, що використовується при створенні шатлів. Справді космічна кольорова гама також вразила в саме серце, адже таких максимально природніх, елегантних та стриманих відтінків розробники ще не презентували.  
-                            </p>
-                            <p>
-                                Перша і найважливіша — титанова рамка. Вона прийшла на заміну нержавіючій сталі минулих поколінь і зробила сам смартфон значно легшим та витривалішим, а межі його дисплея ще тоншими, поглиблюючи занурення в зображення.     
-                            </p>
-                            <p>
-                                Друга — нова клавіша Дії, що змінила перемикач беззвучного режиму. Принцип роботи цієї клавіші буде знайомий власникам AW Ultra - за замовчуванням вона все ще перемикає беззвучний і звичайні режими, але може виконувати й інші функції, в залежності від ваших потреб.                                          
-                            </p>
-                            <p>
-                                Остання та не менш знакова зміна — перехід із зарядного роз'єму Lightning на USB-C. Хоч на таке рішення Епл наштовхнуло відповідне розпорядження ЄС, воно помітно спростить процес зарядки ваших гаджетів, дозволяючи використовувати один кабель між ними всіма.
-                            </p>
+                <div class="catalog__navi navi-catalog">
+                    <div class="navi-catalog__show show-catalog">
+                        <div class="show-catalog__label">На сторінці:</div>
+                        <div class="show-catalog__select">
+                            <select name="form[]" class="show">
+                                <option value="1" selected="selected">9</option>
+                                <option value="2">18</option>
+                                <option value="3">32</option>
+                                <option value="4">100</option>
+                            </select>
                         </div>
-                        <div class="info-product__block _tabs-block">
-                            <table class="info-product__table">
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Стандарт зв'язку</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">2G (GPRS/EDGE), 3G (WCDMA/UMTS/HSPA), 4G (LTE), 5G</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Діагональ екрана</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">6.7</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Роздільна здатність дисплея</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">2796x1290</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Тип матриці</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">OLED (Super Retina XDR)</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Частота оновлення екрана</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">120 Гц</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Матеріал екрана</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">Ceramic Shield</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Вбудована пам'ять</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">256 ГБ</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Операційна система</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">iOS</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Фронтальна камера</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">12 Мп</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Розміщення фронтальної камери</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">Виріз</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Назва процесора</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">Apple A17 Pro</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Кількість ядер</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">2+4</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Основна камера</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">48 Мп + 12 Мп + 12 Мп + 12 Мп</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Кількість основних камер</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">4</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Запис відео основної камери</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">4K/3840x2160/стереозвук</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Матеріал корпуса</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">Алюміній + титан</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="info-product__label">Роз'єми</div>
-                                    </td>
-                                    <td>
-                                        <div class="info-product__value">USB Type-C</div>
-                                    </td>
-                                </tr>
-                            </table>
+                    </div>
+                    <div class="navi-catalog__pages">
+                        <div class="pagging">
+                            <a href="" class="pagging__arrow"></a>
+                            <ul class="pagging__list">
+                                <li>
+                                    <a href="" class="pagging__item _active">1</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">2</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">3</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">4</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">5</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">...</a>
+                                </li>
+                                <li>
+                                    <a href="" class="pagging__item">10</a>
+                                </li>
+                            </ul>
+                            <a href="" class="pagging__arrow"></a>
                         </div>
                     </div>
                 </div>
-                <section class="product__same same-products">
-                    <h2 class="same-products__title">Схожі товари</h2>
-                    <div class="same-products__items items-products">
-                        <div class="items-products__column">
-                            <div class="item-product">
-                                <div class="item-product__labels">
-                                </div>
-                                <a href="" class="item-product__image">
-                                    <picture>
-                                        <source srcset="images/products/iPhone14.webp" type="image/webp">
-                                        <picture>
-                                            <source srcset="images/products/iPhone14.webp" type="image/webp"><img src="images/products/iPhone14.jpg" alt="iPhone 14"></picture>
-                                    </picture>
-                                </a>
-                                <div class="item-product__body">
-                                    <a href="" class="item-product__title">
-                                        <span>Мобільний телефон Apple iPhone 14 Pro Max 512GB Deep Purple</span>
-                                    </a>
-                                    <div class="item-product__footer">
-                                        <div class="item-product__old-price">67 499 грн</div>
-                                        <a href="" class="item-product__add"></a>
-                                        <div class="item-product__price">59 999 грн</div>
-                                    </div>
-                                </div>
-                                <div class="item-product__hover hover-item-product">
-                                    <a href="" class="hover-item-product__title">
-                                        <span>Мобільний телефон Apple iPhone 14 Pro Max 512GB Deep Purple</span>
-                                    </a>
-                                    <div class="hover-item-product__options options-item-product">
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Характеристики: </div>
-                                            <div class="options-item-product__value">Екран (6.7", OLED (Super Retina XDR), 2796x1290) / Apple A16 Bionic / основна квадро-камера: 48 Мп + 12 Мп + 12 Мп + 12 Мп, фронтальна камера: 12 Мп / 512 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / Nano-SIM / iOS 16</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Гарантія: </div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Доставка:</div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                    </div>
-                                    <div class="hover-item-product__body">
-                                        <a href="" class="hover-item-product__cart"></a>
-                                    </div>
-                                    <div class="hover-item-product__footer">
-                                        <div class="hover-item-product__old-price">67 499 грн</div>
-                                        <div class="hover-item-product__stock">в наявності</div>
-                                        <div class="hover-item-product__price">59 999 грн</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-products__column">
-                            <div class="item-product">
-                                <div class="item-product__labels">
-                                </div>
-                                <a href="" class="item-product__image">
-                                    <picture>
-                                        <source srcset="images/products/iPhone13.webp" type="image/webp">
-                                        <picture>
-                                            <source srcset="images/products/iPhone13.webp" type="image/webp"><img src="images/products/iPhone13.jpg" alt="iPhone 13 8"></picture>
-                                    </picture>
-                                </a>
-                                <div class="item-product__body">
-                                    <a href="" class="item-product__title">
-                                        <span>Мобільний телефон Apple iPhone 13 512GB (PRODUCT) Red (MLQF3HU/A)</span> 
-                                    </a>
-                                    <div class="item-product__footer">
-                                        <a href="" class="item-product__add"></a>
-                                        <div class="item-product__price">35 000 грн</div>
-                                    </div>
-                                </div>
-                                <div class="item-product__hover hover-item-product">
-                                    <a href="" class="hover-item-product__title">
-                                        <span>Мобільний телефон Apple iPhone 13 512GB (PRODUCT) Red (MLQF3HU/A)</span>
-                                    </a>
-                                    <div class="hover-item-product__options options-item-product">
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Характеристики: </div>
-                                            <div class="options-item-product__value">Екран (6.1", OLED (Super Retina XDR), 2532x1170) / Apple A15 Bionic / подвійна основна камера: 12 Мп + 12 Мп, фронтальна камера: 12 Мп / 512 ГБ вбудованої пам'яті / 3G / LTE / 5G / GPS / Nano-SIM, eSIM / iOS 15</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Гарантія: </div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Доставка:</div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                    </div>
-                                    <div class="hover-item-product__body">
-                                        <a href="" class="hover-item-product__cart"></a>
-                                    </div>
-                                    <div class="hover-item-product__footer">
-                                        <div class="hover-item-product__stock">в наявності</div>
-                                        <div class="hover-item-product__price">35 000 грн</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-products__column">
-                            <div class="item-product">
-                                <div class="item-product__labels">
-                                </div>
-                                <a href="" class="item-product__image">
-                                    <picture>
-                                        <source srcset="images/products/samsung-s24ultra.webp" type="image/webp">
-                                        <picture>
-                                            <source srcset="images/products/samsung-s24ultra.webp" type="image/webp"><img src="images/products/samsung-s24ultra.jpg" alt="Samsung S24 Ultra"></picture>
-                                    </picture>
-                                </a>
-                                <div class="item-product__body">
-                                    <a href="" class="item-product__title">
-                                        <span>Мобільний телефон Samsung Galaxy S24 Ultra 12GB/1TB Titanium Gray</span> 
-                                    </a>
-                                    <div class="item-product__footer">
-                                        <a href="" class="item-product__add"></a>
-                                        <div class="item-product__price">71 999 грн</div>
-                                    </div>
-                                </div>
-                                <div class="item-product__hover hover-item-product">
-                                    <a href="" class="hover-item-product__title">
-                                        <span>Мобільний телефон Samsung Galaxy S24 Ultra 12GB/1TB Titanium Gray</span>
-                                    </a>
-                                    <div class="hover-item-product__options options-item-product">
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Характеристики: </div>
-                                            <div class="options-item-product__value">Екран (6.8", Dynamic AMOLED 2X, 3120x1440) / Qualcomm Snapdragon 8 Gen 3 for Galaxy (3.4 ГГц + 3.15 ГГц + 2.96 ГГц + 2.27 ГГц) / RAM 12 ГБ / 1 ТБ вбудованої пам'яті</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Гарантія: </div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                        <div class="options-item-product__item">
-                                            <div class="options-item-product__label">Доставка:</div>
-                                            <div class="options-item-product__value">Є</div>
-                                        </div>
-                                    </div>
-                                    <div class="hover-item-product__body">
-                                        <a href="" class="hover-item-product__cart"></a>
-                                    </div>
-                                    <div class="hover-item-product__footer">
-                                        <div class="hover-item-product__stock">в наявності</div>
-                                        <div class="hover-item-product__price">71 999 грн</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
+            </div>
         </div>
     </div>
-
 
     <div class="page__info-menu info-menu">
         <div class="info-menu__container _container">
@@ -1253,7 +1580,7 @@
                     <ul class="info-menu__list">
                         <li><a href="" class="info-menu__link">Бренди</a></li>
                         <li><a href="" class="info-menu__link">Доставка</a></li>
-                        <li><a href="" class="info-menu__link">Розпродаж</a></li>
+                        <li><a href="" class="info-menu__link">Распродаж</a></li>
                         <li><a href="" class="info-menu__link">Контакти</a></li>
                         <li><a href="" class="info-menu__link">Відгуки</a></li>
                     </ul>
